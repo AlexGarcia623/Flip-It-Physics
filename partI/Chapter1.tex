@@ -1,0 +1,128 @@
+\documentclass[]{flipit}
+
+\begin{document}
+
+\chapter{One-Dimensional Kinematics}
+
+\begin{question}
+    \item Two cars start from rest at a red stop light. When the light turns green, both cars accelerate forward. The blue car accelerates uniformly at a rate of 3.3~m/s$^2$ for 3~s. It then continues at a constant speed for 12.8~seconds, before applying the breaks such that the car's speed decreases uniformly coming to rest 152~m from where it started. The yellow car accelerates uniformly the entire distance, finally catching the blue car just as the blue car comes to a stop. (a) How fast is the blue car going 2.1~s after it starts? (b) How fast is the blue car going 9.9~s after it starts? (c) How far does the blue car travel before its breaks are applied to slow down? (d) What is the acceleration of the blue car ones its breaks are applied? (e) What is the total time the blue car is moving? (f) What is the acceleration of the yellow car?
+\end{question}
+
+\begin{enumi}
+    \item Since the car stars at rest at $t=0$, is accelerated for 3 s (importantly, longer than 2.1~s), and is doing so at a constant rate we can use the following equation,
+
+    \[\Delta v = v_f - v_i = at\]
+
+    where $v_0 = 0$~m/s, $a=3.3$~m/s$^2$, and $t=2.1$~s. 
+    This implies that the blue car is going \boxed{6.93~{\rm m/s}} after 2.1~s.
+
+    \item In order to answer this next question, we must first know the maximum speed the car reached during its initial acceleration.
+    We can use the same idea as above to determine that the car reached 9.9~m/s after accelerating for 3~seconds.
+    The car continues at the same speed for the next 12.8~seconds, which, combined with the initial 3~second acceleration, is longer than the 9.9~s it is asking for.
+    Thus, the speed of the blue car 9.9~s after start is simply \boxed{9.9~ {\rm m/s}}.
+
+    \item This should be broken up into two parts (i) when the car is accelerating and (ii) after the car stops accelerating. 
+    Here (ii) may be slightly easier to answer, so let's start with that one. 
+    We know that for 12.8~seconds the car is traveling at a speed of 9.9~m/s, using the formula
+
+    \[\Delta x = vt~,\]
+
+    where $v=9.9$~m/s and $t=12.8$~s, we determine that after it stopped accelerating it traveled 126.72~m. 
+    This is not the full answer however!
+    We need to include the component in (i), where the car was accelerating.
+    Using
+
+    \[\Delta x = v_0 t + \frac12 a t^2~,\]
+
+    where $v_0 = 0$~m/s (since we start at rest), $t=3$~s, and $a=3.3$~m/s$^2$, we can determine the distance the car moved while accelerating.
+    From this, we obtain that the car went 14.85~m while it was accelerating.
+    Combining the distances we got in (i) and (ii), we obtain the the blue car went a total of \boxed{141.57~{\rm m}} before applying the breaks.
+
+    \item In total, the car travels 152~m, we first need to determine which parts of this was acceleration and constant velocity. 
+    To determine the distance the blue car traveled while it was initially accelerating, we need to use
+
+    \[v_f^2 = v_0^2 + 2a\Delta x~,\]
+
+    where $v_0 = 0~{\rm m/s}$, $a=3.3~{\rm m/s}^2$, and $v_f=9.9~{\rm m/s}$.
+    From this, by solving for $\Delta x$, we determine that the car travels 14.85~m while accelerating.
+    Next, during the 12.8 seconds of constant velocity at 9.9~m/s (from part b), the car simply travels
+
+    \[\Delta x = v t~,\]
+
+    giving us 126.72~m during the constant velocity portion.
+    In total, before applying the breaks, the blue car travels 141.57~m of the total 152~m; therefore, after applying the breaks the car travels 10.43~m.
+    Since we know the initial velocity before the breaks are applied from (b), the final velocity is 0~m/s, and {\it not} the time, we should again use
+
+    \[v^2 = v_0^2 + 2a\Delta x~.\]
+
+    Solving for $a$, we obtain the acceleration of the blue car: \boxed{4.69~{\rm m/s}^2}.
+
+    \item The blue car's motion can be broken into three components (i) acceleration, (ii) constant velocity, and (iii) deceleration.
+    During (i) and (ii) the problem states that the car accelerates for 3~seconds and travels at a constant velocity for 12.8~seconds (total of 15.8~seconds).
+    Period (iii) actually requires a calculation -- we know the acceleration from (d), we know the initial velocity from (b), and we know the distance traveled from the problem statement.
+    We can use all of these combined to solve for the length of time using 
+
+    \[x_f = x_0 + v_0 t + \frac12at^2~,\]
+
+    where we'll have to use the quadratic formula (or other root-finding methods) to get the positive, real time.
+    For this problem, to avoid confusion, it is worth plugging in the numbers symbolically first.
+    $x_f = 10.43~{\rm m}$, $x_0 = 0~{\rm m}$\footnote{Take $x_0=0$ for simplicity. In principle, you could take this (and $x_f$) to be the actual distances from the start of movement, however, it would cancel out in the next step anyway}, $v_0 = 9.9~{\rm m/s}$, and $a = 4.69~{\rm m/s}^2$, such that
+
+    \[0 = -10.43 + 9.9 t + 2.34 t^2~.\]
+
+    This has two roots: $t = 0.87~{\rm and}~-5.10$~seconds. 
+    A negative time is not physical, so we can ignore this root and get that the total time spend decelerating is $t = 0.87~{\rm s}$.
+    Thus, combining the times from (i), (ii), and (iii), the total time the blue car spent moving was \boxed{16.67~{\rm s}}.
+
+    \item The yellow car travels 152~m from the start in 16.67~s, but it is accelerating during its journey.
+    We can use 
+    
+    \[x_f = x_0 + v_0t + \frac12 at^2~,\]
+
+    where $x_f = 152~{\rm m}$, $x_0=0~{\rm m}$, $v_0=0~{\rm m/s}$, and $t=16.67~{\rm s}$.
+    Solving for $a$,
+
+    \[a = \frac{2x_f}{t^2} \]
+
+    giving an acceleration of \boxed{1.09~{\rm m/s}^2}
+\end{enumi}
+
+\begin{question}
+    \item A tortoise and hare start from rest and have a race. As the race begins, both accelerate forward. The hare accelerates uniformly at a rate of 1.6~m/s$^2$ for 4.3~s. It then continues at a constant speed for 12.4~s, before getting tired and slowing down with constant acceleration coming to rest 110 m from where it started. The tortoise accelerates uniformly the entire distance, finally catching the hare just as the hare comes to a stop. (a) How fast is the hare going 2.6~s after it starts? (b) How fast is the hare going 10.9~s after it starts? (c) How far does the hare travel before it begins to slow down? (d) What is the acceleration of the hare once it begins to slow down? (e) What is the total time the hare is moving? (f) What is the acceleration of the tortoise?
+\end{question}
+
+\begin{enumi}
+    \item The hare is accelerating during this time. 
+    To determine the velocity at this time, we can use
+    
+    \[\Delta v = v_f - v_0 = at~,\]
+
+    where the hare accelerates at 1.6~{m/s}$^2$ for 2.6~{s} from rest, giving a final velocity of \boxed{4.16~{\rm m/s}}.
+
+    \item After 4.3~{s}, the hare travels at a constant speed.
+    Thus, by determining the speed at that time, we get the speed at the later time.
+    Solving
+
+    \[\Delta v = v_f - v_0 = a t~,\]
+
+    for $v_f$ at $t = 4.3~{\rm s}$, we get a velocity of \boxed{6.88~{\rm m/s}} at $t=10.9~{\rm s}$.
+\end{enumi}
+
+\begin{question}
+    \item A blue ball is thrown upward with an initial speed of 21.2 m/s, from a height of 0.9 m above the ground. 2.6 s after the blue ball is thrown, a red ball is thrown down with an initial speed of 10.6 m/s from a height of 25.4 m above the ground. The force of gravity due to Earth results in the balls each having a constant downward acceleration of 9.81 m/s$^2$. (a) What is the speed of the blue ball when it reaches its maximum height? (b) How long does it take the blue ball to reach its maximum height? (c) What is the maximum height the blue ball reaches? (d) What is the height of the red ball 3.38 seconds after the blue ball is thrown? (e) How long after the blue ball is thrown are the two balls at the same height? (f) Which statement is true about the blue ball after it has reached its maximum height and is falling back down? (i) The acceleration is position, and it is speeding up, (ii) The acceleration is negative, and it is speeding up, (iii) The acceleration is positive, and it is slowing down, (iv) The acceleration is positive, and it is speeding up.
+\end{question}
+
+
+\begin{question}
+    \item Anna is driving from Champaign to Indianapolis on I-74. She passes Prospect Ave. exit at noon and maintains a constant speed of 75 mph for the entire trip. Chuck is driving in the opposite direction. He passes the Brownsburg, IN exit at 12:30 PM and maintains a constant speed of 65 mph all the way to Champaign. Assume that the Brownsburg and Prospect exits are 105 miles apart and that the road is straight. How far from the Prospect Ave. exit do Anna and Chuck pass each other?
+\end{question}
+
+
+
+\begin{question}
+    \item Shown below is a graph of velocity versus time for a moving object. The object starts at position $x=0$. What is the final position (as measured from $x=0$) after it experiences the motion described by the graph, from $t=0$ seconds to $t=5$ seconds.
+\end{question}
+
+\red{need to add figure here}
+
+\end{document}
